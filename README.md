@@ -67,7 +67,11 @@ export function hasClass(el, className) {
   return url ? url.substring(1) : ''
 }
 ```
-### 封装jsonp  [node-jsonp](https://www.npmjs.com/package/node-jsonp)
+### 封装 jsonp
+* 解决跨域的一种方式 [node-jsonp链接](https://www.npmjs.com/package/node-jsonp)
+* 原理 1.使用JSON数据请求的URL
+       2.匿名函数执行的回调
+
 ```
 import originJsonp from 'jsonp'
 export default function jsonp(url, data, option) {
