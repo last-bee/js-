@@ -54,8 +54,9 @@ export function hasClass(el, className) {
  }
 ```
 ### 对象参数变成路径参数 
-** 如果url有？则直接添加& **  
-** 如果url无？则添加？ **
+* url += (url.indexOf('?') < 0 ? '?' : '&') + param(data)
+**如果url有？则直接添加&**</br>
+**如果url无？则添加？**
 ```
  export function param(data) {
   let url = ''
