@@ -67,7 +67,7 @@ export function hasClass(el, className) {
   return url ? url.substring(1) : ''
 }
 ```
-### 封装[jsonp](https://www.npmjs.com/package/node-jsonp)
+### 封装jsonp  [node-jsonp](https://www.npmjs.com/package/node-jsonp)
 ```
 import originJsonp from 'jsonp'
 export default function jsonp(url, data, option) {
