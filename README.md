@@ -69,8 +69,10 @@ export function hasClass(el, className) {
 ```
 ### 封装 jsonp
 * 解决跨域的一种方式 [node-jsonp链接](https://www.npmjs.com/package/node-jsonp)
-* 原理 1.使用JSON数据请求的URL
-       2.匿名函数执行的回调
+#### 原理  
+        * script不存在跨域
+        *通过请求script的URL
+        *匿名函数执行的回调
 
 ```
 import originJsonp from 'jsonp'
