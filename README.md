@@ -116,21 +116,47 @@ function isWeixinBrowser() {
   })
   console.log(arr)
   1hello
-  ---
   2hello
-  ---
   3hello
-  ---
   4hello
-  ---
   5hello
-  ---
   6hello
-  ---
   [1,2,3,4,5,6]
 ```
   
-* 
-
-
-
+*  map函数，遍历数组每个元素，并回调操作，需要返回值，返回值组成新的数组，原数组不变
+``` javascript
+var newArr = arr.map((item,index)=>{
+    item = item + 'hello'
+	  return (item)
+})
+console.log(newArr)//["1hello", "2hello", "3hello", "4hello", "5hello", "6hello"]
+console.log(arr)//[1,2,3,4,5,6]
+```
+* filter函数， 过滤通过条件的元素组成一个新数组， 原数组不变
+``` javascript
+  var newArr = arr.filter((item)=>{
+    if(item>2){
+      return item
+    }
+  })
+  console.log(newArr)//[3,4,5,6]
+  console.log(arr)//[1,2,3,4,5,6]
+```
+* some函数，遍历数组中是否有符合条件的元素，返回Boolean值
+``` javascript 
+//判断是否可以被开平方
+var newArr = arr.some((item)=>{
+   return item>1&&!~Math.sqrt(item).toString().indexOf('.')
+})  
+console.log(newArr)//true
+console.log(arr)//[1,2,3,4,5,6]
+```
+* every函数， 遍历数组中是否每个元素都符合条件， 返回Boolean值
+``` javascript
+var newArr = arr.every((item)=>{
+   return item>1&&!~Math.sqrt(item).toString().indexOf('.')
+})  
+console.log(newArr)//false
+console.log(arr)//[1,2,3,4,5,6]
+```
