@@ -89,4 +89,19 @@ export default function jsonp(url, data, option) {
   })
 }
 ```
-
+### 判断终端是否为手机
+``` javascript
+function isWeixinBrowser() {
+    var ua = navigator.userAgent;
+    var ipad = ua.match(/(iPad).*OS\s([\d_]+)/)
+    var isIphone = !ipad && ua.match(/(iPhone\sOS)\s([\d_]+)/)
+    var isAndroid = ua.match(/(Android)\s+([\d.]+)/)
+    var isMobile = isIphone || isAndroid;
+    var agent = navigator.userAgent.toLowerCase();
+    if (agent.match(/MicroMessenger/i) == "micromessenger"&&isMobile) {
+        return true;
+    } else {
+        return false;
+    }
+}
+```
