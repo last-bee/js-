@@ -105,3 +105,32 @@ function isWeixinBrowser() {
     }
 }
 ```
+### js中的遍历
+#### var arr = [1,2,3,4,5,6]
+* for循环，需要知道数组的长度，才能遍历
+* forEach ***循环数组中每一个元素并采取操作， 没有返回值， 可以不用知道数组长度***
+``` javascript
+ arr.forEach((item,index)=>{
+    item = item + 'hello'
+    console.log(item)
+  })
+  console.log(arr)
+  1hello
+  ---
+  2hello
+  ---
+  3hello
+  ---
+  4hello
+  ---
+  5hello
+  ---
+  6hello
+  ---
+  [1,2,3,4,5,6]
+```
+  
+* 
+
+
+
