@@ -115,13 +115,13 @@ function isWeixinBrowser() {
     console.log(item)
   })
   console.log(arr)
-  1hello
-  2hello
-  3hello
-  4hello
-  5hello
-  6hello
-  [1,2,3,4,5,6]
+  //1hello
+  //2hello
+  //3hello
+  //4hello
+  //5hello
+  //6hello
+  //[1,2,3,4,5,6]
 ```
   
 *  map函数，遍历数组每个元素，并回调操作，需要返回值，返回值组成新的数组，原数组不变
@@ -159,4 +159,21 @@ var newArr = arr.every((item)=>{
 })  
 console.log(newArr)//false
 console.log(arr)//[1,2,3,4,5,6]
+```
+### sort排序
+* 数组排序
+``` javascript
+var sortArr = [1,2,3,5,6,7,9,0,-12]
+var newArr =  sortArr.sort((a,b)=>{//a-b 从小到大排序 b-a 从大到小
+    return a-b //大于0或者为true 交换位置
+})
+newArr // [-12, 0, 1, 2, 3, 5, 6, 7, 9]
+```
+* 数组对象排序
+``` javascript
+var sortArr = [{num:10},{num:2},{num:3},{num:5},{num:6},{num:8}]
+var newArr = sortArr.sort((a,b)=>{
+   return a.num > b.num
+})
+console.log(newArr)//[{num:2}, {num:3}, {num:5}, {num:6}, {num:8}, {num:10}]
 ```
