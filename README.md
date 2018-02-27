@@ -177,3 +177,23 @@ var newArr = sortArr.sort((a,b)=>{
 })
 console.log(newArr)//[{num:2}, {num:3}, {num:5}, {num:6}, {num:8}, {num:10}]
 ```
+### axios
+* axios请求拦截
+``` javascript
+axios.interceptors.request.use((config)=>{
+    //发起请求前的业务处理
+    return config
+},(error)=>{
+    return Promise.reject(error)
+})
+```
+* axios响应拦截
+``` javascript
+axios.interceptors.response.use((response)=>{
+    //对相应数据做处理
+    return response
+},(error)=>{
+    return Promise.reject(error)
+})
+```
+[axios链接](https://github.com/axios/axios/issues/164#issuecomment-327837467)
