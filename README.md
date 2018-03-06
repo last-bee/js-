@@ -160,6 +160,15 @@ var newArr = arr.every((item)=>{
 console.log(newArr)//false
 console.log(arr)//[1,2,3,4,5,6]
 ```
+* reduce函数，把两个数据进行操作，得到合并的结构,不改变原数组
+``` javascript
+var b = [{a:12},{a:10},{a:8}]
+var a= b.reduce((x,y)=>{
+	return x + y.a
+},0)
+a // 30
+b // [{a:12},{a:10},{a:8}]
+```
 ### sort排序
 * 数组排序
 ``` javascript
